@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <Wrapper variants={container} initial="hidden" animate="show">
       <Logo variants={header}>
-        <Image src={logo} />
+        <Image alt="Help Ukraine Denmark" src={logo} />
         <Title>Help Ukraine</Title>
         <Subtitle>Denmark</Subtitle>
         <Hashtag>#hUdk</Hashtag>
@@ -51,7 +51,7 @@ export default function Home() {
         doner på samlind
       </SamlindButton>
       <Mobilepay variants={item}>
-        <Image objectFit="contain" src={mobilepay} />
+        <Image alt="MobilePay" objectFit="contain" src={mobilepay} />
       </Mobilepay>
     </Wrapper>
   )
