@@ -6,10 +6,11 @@ import { Button } from "../components/Button/Button"
 import { motion } from "framer-motion"
 
 const container = {
-  hidden: { y: -20, scale: 0.5 },
+  hidden: { opacity: 0, y: -20, scale: 0.5 },
   show: {
     y: 0,
     scale: 1,
+    opacity: 1,
     transition: {
       staggerChildren: 0.15,
     },
@@ -17,13 +18,13 @@ const container = {
 }
 
 const header = {
-  hidden: { y: -20 },
-  show: { y: 0 },
+  hidden: { opacity: 0, y: -20 },
+  show: { opacity: 1, y: 0 },
 }
 
 const item = {
-  hidden: { y: -20, scale: 0.5 },
-  show: { y: 0, scale: 1 },
+  hidden: { opacity: 0, y: -20, scale: 0.5 },
+  show: { opacity: 1, y: 0, scale: 1 },
 }
 
 export default function Home() {
