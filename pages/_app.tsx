@@ -11,10 +11,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 }
 
 const Wrapper = styled.div`
-  width: 80vw;
-  min-width: 300px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 40px 0;
   display: flex;
   justify-content: center;
 `

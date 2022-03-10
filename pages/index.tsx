@@ -6,11 +6,8 @@ import { Button } from "../components/Button/Button"
 import { motion } from "framer-motion"
 
 const container = {
-  hidden: { opacity: 0, y: -20, scale: 0.5 },
+  hidden: {},
   show: {
-    y: 0,
-    scale: 1,
-    opacity: 1,
     transition: {
       staggerChildren: 0.15,
     },
@@ -18,13 +15,13 @@ const container = {
 }
 
 const header = {
-  hidden: { opacity: 0, y: -20 },
-  show: { opacity: 1, y: 0 },
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
 }
 
 const item = {
-  hidden: { opacity: 0, y: -20, scale: 0.5 },
-  show: { opacity: 1, y: 0, scale: 1 },
+  hidden: { opacity: 0, scale: 0.5 },
+  show: { opacity: 1, scale: 1 },
 }
 
 export default function Home() {
@@ -58,13 +55,16 @@ export default function Home() {
   )
 }
 
-const Logo = styled(motion.div)`
+const Wrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 400px;
+  width: 90vw;
+  text-align: center;
 `
 
-const Wrapper = styled(motion.div)`
+const Logo = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -86,7 +86,7 @@ const Hashtag = styled.h3`
 `
 
 const Mobilepay = styled(motion.div)`
-  width: 400px;
+  width: 100%;
   border-radius: 7px;
   overflow: hidden;
   border: 1px solid #ccc;
@@ -94,21 +94,21 @@ const Mobilepay = styled(motion.div)`
 
 const FacebookButton = styled(Button)`
   background-color: #0084ff;
-  width: 400px;
+  width: 100%;
   color: #ffffff;
   margin-bottom: 24px;
 `
 
 const GoFundMeButton = styled(Button)`
   background-color: #00a85c;
-  width: 400px;
+  width: 100%;
   color: #ffffff;
   margin-bottom: 24px;
 `
 
 const SamlindButton = styled(Button)`
   background-color: #004b24;
-  width: 400px;
+  width: 100%;
   color: #ffffff;
   margin-bottom: 24px;
 `

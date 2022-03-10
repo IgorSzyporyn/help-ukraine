@@ -16,7 +16,7 @@ export const Button = (props: ButtonProps) => {
 const Wrapper = styled(motion.a)`
   border: 0 none;
   background-color: transparent;
-  padding: 0;
+  padding: 0 4px;
   margin: 0;
   text-transform: uppercase;
   display: flex;
