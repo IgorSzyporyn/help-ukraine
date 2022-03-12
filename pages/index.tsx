@@ -6,6 +6,8 @@ import { Button } from "../components/Button/Button"
 import { motion } from "framer-motion"
 import { NextSeo } from "next-seo"
 
+export const config = { amp: true }
+
 const container = {
   hidden: {},
   show: {
