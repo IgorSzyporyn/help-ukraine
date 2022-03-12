@@ -168,6 +168,10 @@ const SEO: DefaultSeoProps = {
   },
   additionalMetaTags: [
     {
+      name: "keywords",
+      content: "Ukraine, Help, Aid, Support, Hjælp, Støt, Doner,",
+    },
+    {
       name: "application-name",
       content: "Help Ukraine Denmark",
     },
