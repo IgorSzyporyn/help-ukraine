@@ -142,6 +142,10 @@ const SEO: DefaultSeoProps = {
     ...robotoFont,
     ...icons,
     {
+      rel: "canonical",
+      href: "http://helpukrainedenmark.dk",
+    },
+    {
       rel: "manifest",
       href: "/manifest.json",
     },
@@ -162,10 +166,12 @@ const SEO: DefaultSeoProps = {
       },
     ],
   },
-  mobileAlternate: {
-    media: "only screen and (max-width: 640px)",
-    href: "http://helpukrainedenmark.dk/",
-  },
+  /**
+    mobileAlternate: {
+      media: "only screen and (max-width: 640px)",
+      href: "http://helpukrainedenmark.dk/",
+    },
+  */
   additionalMetaTags: [
     {
       name: "keywords",
