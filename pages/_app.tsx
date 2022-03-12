@@ -7,7 +7,7 @@ import "../styles/global.css"
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <DefaultSeo title="Help Ukraine Denmark" description="#hUdk" {...SEO} />
+      <DefaultSeo title="Help Ukraine | Denmark" description="#hUdk" {...SEO} />
       <Wrapper>
         <Component {...pageProps} />
       </Wrapper>
@@ -17,7 +17,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 20px 0;
   display: flex;
   justify-content: center;
 `

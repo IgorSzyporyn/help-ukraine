@@ -152,16 +152,16 @@ const SEO: DefaultSeoProps = {
   ],
   openGraph: {
     url: "http://helpukrainedenmark.dk",
-    title: "Help Ukraine Denmark",
+    title: "Help Ukraine | Denmark",
     description:
       "A non profit organisation to facilitate help for the humanitarian catastrophe that is unfolding as a result as Russias war on Ukraine",
-    site_name: "Help Ukraine Denmark",
+    site_name: "Help Ukraine | Denmark",
     images: [
       {
         url: "http://helpukrainedenmark.dk/logos/logo-800x600.png",
         width: 800,
         height: 600,
-        alt: "Help Ukraine Denmark",
+        alt: "Help Ukraine | Denmark",
         type: "image/jpeg",
       },
     ],
@@ -179,7 +179,7 @@ const SEO: DefaultSeoProps = {
     },
     {
       name: "application-name",
-      content: "Help Ukraine Denmark",
+      content: "Help Ukraine | Denmark",
     },
     {
       name: "apple-mobile-web-app-capable",
@@ -191,7 +191,7 @@ const SEO: DefaultSeoProps = {
     },
     {
       name: "apple-mobile-web-app-title",
-      content: "Help Ukraine Denmark",
+      content: "Help Ukraine | Denmark",
     },
     {
       name: "description",

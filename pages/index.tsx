@@ -16,9 +16,14 @@ const containerAnimation = {
   },
 }
 
-const itemAnimation = {
+const buttonAnimation = {
   hidden: { opacity: 0, scale: 0.5 },
   show: { opacity: 1, scale: 1 },
+}
+
+const mobilePayAnimation = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
 }
 
 export default function Home() {
@@ -28,43 +33,44 @@ export default function Home() {
       <Wrapper variants={containerAnimation} initial="hidden" animate="show">
         <Header>
           <Image
-            alt="Help Ukraine Denmark"
-            src="/logos/logo-192x192.png"
-            width="192"
-            height="192"
+            alt="Help Ukraine | Denmark"
+            src="/icons/icon-512x512.png"
+            width="240"
+            height="240"
           />
           <Title>Help Ukraine</Title>
           <Subtitle>Denmark</Subtitle>
           <Hashtag>#hUdk</Hashtag>
         </Header>
         <FacebookButton
-          variants={itemAnimation}
+          variants={buttonAnimation}
           href="https://www.facebook.com/groups/helpukrainedenmark/?ref=share"
         >
           støt os på facebook
         </FacebookButton>
         <GoFundMeButton
-          variants={itemAnimation}
+          variants={buttonAnimation}
           href="https://gofund.me/2a40c33a"
         >
           doner på gofundme
         </GoFundMeButton>
         <SamlindButton
-          variants={itemAnimation}
+          variants={buttonAnimation}
           href="https://samlind.dk/indsamling/hjaelp-til-flygtninge-fra-ukraine/"
         >
           doner på samlind
         </SamlindButton>
         <MailButton
-          variants={itemAnimation}
+          variants={buttonAnimation}
           href="mailto:mail@helpukrainedenmark.dk"
         >
           skriv os en email
         </MailButton>
-        <Mobilepay variants={itemAnimation}>
+        <Mobilepay variants={mobilePayAnimation}>
           <Image
             alt="MobilePay"
-            objectFit="contain"
+            width="400"
+            height="568"
             src="/images/mobilepay.png"
           />
         </Mobilepay>
