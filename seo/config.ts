@@ -223,11 +223,6 @@ const SEO: DefaultSeoProps = {
       content: "#0057b7",
     },
     {
-      name: "viewport",
-      content:
-        "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover",
-    },
-    {
       httpEquiv: "x-ua-compatible",
       content: "IE=edge; chrome=1",
     },

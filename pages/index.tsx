@@ -1,14 +1,13 @@
 import styled from "styled-components"
 import Image from "next/image"
-import logo from "../assets/images/logo.png"
-import mobilepay from "../assets/images/mobilepay.png"
-import { Button } from "../components/Button/Button"
 import { motion } from "framer-motion"
 import { NextSeo } from "next-seo"
 
-export const config = { amp: true }
+import { Button } from "../components/Button/Button"
 
-const container = {
+// export const config = { amp: true }
+
+const containerAnimation = {
   hidden: {},
   show: {
     transition: {
@@ -17,12 +16,7 @@ const container = {
   },
 }
 
-const header = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1 },
-}
-
-const item = {
+const itemAnimation = {
   hidden: { opacity: 0, scale: 0.5 },
   show: { opacity: 1, scale: 1 },
 }
@@ -31,33 +25,48 @@ export default function Home() {
   return (
     <>
       <NextSeo />
-      <Wrapper variants={container} initial="hidden" animate="show">
-        <Logo variants={header}>
-          <Image alt="Help Ukraine Denmark" src={logo} />
+      <Wrapper variants={containerAnimation} initial="hidden" animate="show">
+        <Header>
+          <Image
+            alt="Help Ukraine Denmark"
+            src="/logos/logo-192x192.png"
+            width="192"
+            height="192"
+          />
           <Title>Help Ukraine</Title>
           <Subtitle>Denmark</Subtitle>
           <Hashtag>#hUdk</Hashtag>
-        </Logo>
+        </Header>
         <FacebookButton
-          variants={item}
+          variants={itemAnimation}
           href="https://www.facebook.com/groups/helpukrainedenmark/?ref=share"
         >
           støt os på facebook
         </FacebookButton>
-        <GoFundMeButton variants={item} href="https://gofund.me/2a40c33a">
+        <GoFundMeButton
+          variants={itemAnimation}
+          href="https://gofund.me/2a40c33a"
+        >
           doner på gofundme
         </GoFundMeButton>
         <SamlindButton
-          variants={item}
+          variants={itemAnimation}
           href="https://samlind.dk/indsamling/hjaelp-til-flygtninge-fra-ukraine/"
         >
           doner på samlind
         </SamlindButton>
-        <MailButton variants={item} href="mailto:mail@helpukrainedenmark.dk">
+        <MailButton
+          variants={itemAnimation}
+          href="mailto:mail@helpukrainedenmark.dk"
+        >
           skriv os en email
         </MailButton>
-        <Mobilepay variants={item}>
-          <Image alt="MobilePay" objectFit="contain" src={mobilepay} />
+        <Mobilepay variants={itemAnimation}>
+          <Image
+            alt="MobilePay"
+            objectFit="contain"
+            src="/images/mobilepay.png"
+          />
         </Mobilepay>
       </Wrapper>
     </>
@@ -73,7 +82,7 @@ const Wrapper = styled(motion.div)`
   text-align: center;
 `
 
-const Logo = styled(motion.div)`
+const Header = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
