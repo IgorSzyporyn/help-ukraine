@@ -21,6 +21,11 @@ const buttonAnimation = {
   show: { opacity: 1, scale: 1 },
 }
 
+const headerAnimation = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
+}
+
 const mobilePayAnimation = {
   hidden: { opacity: 0 },
   show: { opacity: 1 },
@@ -31,7 +36,7 @@ export default function Home() {
     <>
       <NextSeo />
       <Wrapper variants={containerAnimation} initial="hidden" animate="show">
-        <Header>
+        <Header variants={headerAnimation}>
           <Image
             alt="Help Ukraine | Denmark"
             src="/images/logo.svg"
@@ -122,7 +127,7 @@ const Wrapper = styled(motion.div)`
   text-align: center;
 `
 
-const Header = styled.div`
+const Header = styled(motion.div)`
   display: flex;
   width: 240px;
   flex-direction: column;
