@@ -35,8 +35,8 @@ export default function Home() {
           <Image
             alt="Help Ukraine | Denmark"
             src="/icons/icon-512x512.png"
-            width="240"
-            height="240"
+            width="480"
+            height="480"
           />
           <Title>Help Ukraine</Title>
           <Subtitle>Denmark</Subtitle>
@@ -90,6 +90,7 @@ const Wrapper = styled(motion.div)`
 
 const Header = styled.div`
   display: flex;
+  width: 240px;
   flex-direction: column;
   align-items: center;
 `
@@ -106,7 +107,7 @@ const Subtitle = styled.h2`
 
 const Hashtag = styled.h3`
   margin: 0 0 32px 0;
-  color: #ccc;
+  color: #707070;
 `
 
 const FacebookButton = styled(Button)`

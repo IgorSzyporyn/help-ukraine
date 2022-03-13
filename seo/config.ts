@@ -1,68 +1,5 @@
 import type { DefaultSeoProps } from "next-seo"
 
-const robotoFont = [
-  {
-    rel: "preload",
-    href: "/fonts/roboto/Roboto-Black.ttf",
-    as: "font",
-  },
-  {
-    rel: "preload",
-    href: "/fonts/roboto/Roboto-BlackItalic.ttf",
-    as: "font",
-  },
-  {
-    rel: "preload",
-    href: "/fonts/roboto/Roboto-Bold.ttf",
-    as: "font",
-  },
-  {
-    rel: "preload",
-    href: "/fonts/roboto/Roboto-BoldItalic.ttf",
-    as: "font",
-  },
-  {
-    rel: "preload",
-    href: "/fonts/roboto/Roboto-Italic.ttf",
-    as: "font",
-  },
-  {
-    rel: "preload",
-    href: "/fonts/roboto/Roboto-Light.ttf",
-    as: "font",
-  },
-  {
-    rel: "preload",
-    href: "/fonts/roboto/Roboto-LightItalic.ttf",
-    as: "font",
-  },
-  {
-    rel: "preload",
-    href: "/fonts/roboto/Roboto-Medium.ttf",
-    as: "font",
-  },
-  {
-    rel: "preload",
-    href: "/fonts/roboto/Roboto-MediumItalic.ttf",
-    as: "font",
-  },
-  {
-    rel: "preload",
-    href: "/fonts/roboto/Roboto-Regular.ttf",
-    as: "font",
-  },
-  {
-    rel: "preload",
-    href: "/fonts/roboto/Roboto-Thin.ttf",
-    as: "font",
-  },
-  {
-    rel: "preload",
-    href: "/fonts/roboto/Roboto-ThinItalic.ttf",
-    as: "font",
-  },
-]
-
 const icons = [
   {
     rel: "icon",
@@ -139,7 +76,6 @@ const icons = [
 
 const SEO: DefaultSeoProps = {
   additionalLinkTags: [
-    ...robotoFont,
     ...icons,
     {
       rel: "canonical",
