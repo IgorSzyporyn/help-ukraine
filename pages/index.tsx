@@ -36,7 +36,7 @@ export default function Home() {
       <NextSeo />
       <Wrapper variants={containerAnimation} initial="hidden" animate="show">
         <Header variants={headerAnimation}>
-          <Logo />
+          <Logo style={{ marginTop: -16, marginBottom: -48 }} />
           <Title>Help Ukraine</Title>
           <Subtitle>Denmark</Subtitle>
           <Hashtag>#hUdk</Hashtag>
