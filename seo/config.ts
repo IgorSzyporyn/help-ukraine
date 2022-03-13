@@ -96,7 +96,6 @@ const icons = [
 
 const SEO: DefaultSeoProps = {
   additionalLinkTags: [
-    ...icons,
     {
       rel: "canonical",
       href: "http://helpukrainedenmark.dk",
@@ -105,6 +104,21 @@ const SEO: DefaultSeoProps = {
       rel: "manifest",
       href: "/manifest.json",
     },
+    {
+      rel: "preconnect",
+      href: "https://fonts.googleapis.com",
+    },
+    {
+      rel: "preconnect",
+      href: "https://fonts.gstatic.com",
+      crossOrigin: "true",
+    },
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap",
+      as: "font",
+    },
+    ...icons,
   ],
   openGraph: {
     url: "http://helpukrainedenmark.dk",
@@ -118,16 +132,10 @@ const SEO: DefaultSeoProps = {
         width: 800,
         height: 600,
         alt: "Help Ukraine | Denmark",
-        type: "image/jpeg",
+        type: "image/png",
       },
     ],
   },
-  /**
-    mobileAlternate: {
-      media: "only screen and (max-width: 640px)",
-      href: "http://helpukrainedenmark.dk/",
-    },
-  */
   additionalMetaTags: [
     {
       name: "robots",
