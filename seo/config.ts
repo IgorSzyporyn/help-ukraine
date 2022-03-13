@@ -110,15 +110,17 @@ const SEO: DefaultSeoProps = {
     url: "http://helpukrainedenmark.dk",
     title: "Help Ukraine | Denmark",
     description:
-      "A non profit organisation to facilitate help for the humanitarian catastrophe that is unfolding as a result as Russias war on Ukraine",
+      "A non profit organisation to facilitate help for the humanitarian catastrophe that is unfolding in Ukraine",
     site_name: "Help Ukraine | Denmark",
+    locale: "da_DK",
+    type: "organisation",
     images: [
       {
-        url: "http://helpukrainedenmark.dk/logos/logo-800x600.png",
-        width: 800,
-        height: 600,
+        url: "http://helpukrainedenmark.dk/images/opengraph-1200x630.jpg",
+        width: 1200,
+        height: 630,
         alt: "Help Ukraine | Denmark",
-        type: "image/png",
+        type: "image/jpeg",
       },
     ],
   },
