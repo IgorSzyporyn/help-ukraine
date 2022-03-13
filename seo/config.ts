@@ -1,76 +1,96 @@
 import type { DefaultSeoProps } from "next-seo"
 
+/*
+  const icons = [
+    {
+      rel: "icon",
+      type: "image/png",
+      href: "/icons/icon-32x32.png",
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      href: "/icons/icon-192x192.jpg",
+      sizes: "192x192",
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      href: "/icons/icon-512x512.jpg",
+      sizes: "512x512",
+    },
+    {
+      rel: "apple-touch-icon",
+      type: "image/png",
+      href: "/icons/icon-48x48.jpg",
+      sizes: "48x48",
+    },
+    {
+      rel: "apple-touch-icon",
+      type: "image/png",
+      href: "/icons/icon-57x57.jpg",
+      sizes: "57x57",
+    },
+    {
+      rel: "apple-touch-icon",
+      type: "image/png",
+      href: "/icons/icon-60x60.jpg",
+      sizes: "60x60",
+    },
+    {
+      rel: "apple-touch-icon",
+      type: "image/png",
+      href: "/icons/icon-72x72.jpg",
+      sizes: "72x72",
+    },
+    {
+      rel: "apple-touch-icon",
+      type: "image/png",
+      href: "/icons/icon-76x76.jpg",
+      sizes: "76x76",
+    },
+    {
+      rel: "apple-touch-icon",
+      type: "image/png",
+      href: "/icons/icon-114x114.jpg",
+      sizes: "114x114",
+    },
+    {
+      rel: "apple-touch-icon",
+      type: "image/png",
+      href: "/icons/icon-120x120.jpg",
+      sizes: "120x120",
+    },
+    {
+      rel: "apple-touch-icon",
+      type: "image/png",
+      href: "/icons/icon-144x144.jpg",
+      sizes: "144x144",
+    },
+    {
+      rel: "apple-touch-icon",
+      type: "image/png",
+      href: "/icons/icon-152x152.jpg",
+      sizes: "152x152",
+    },
+    {
+      rel: "apple-touch-icon",
+      type: "image/png",
+      href: "/icons/icon-180x180.jpg",
+      sizes: "180x180",
+    },
+  ]
+*/
+
 const icons = [
   {
     rel: "icon",
-    type: "image/png",
-    href: "/icons/favicon-32x32.png",
-  },
-  {
-    rel: "icon",
-    type: "image/png",
-    href: "/icons/icon-192x192.jpg",
-    sizes: "192x192",
-  },
-  {
-    rel: "icon",
-    type: "image/png",
-    href: "/icons/icon-512x512.jpg",
-    sizes: "512x512",
+    href: "/icons/favicon.svg",
+    type: "image/svg+xml",
   },
   {
     rel: "apple-touch-icon",
-    type: "image/png",
-    href: "/icons/apple-icon-57x57.jpg",
-    sizes: "57x57",
-  },
-  {
-    rel: "apple-touch-icon",
-    type: "image/png",
-    href: "/icons/apple-icon-60x60.jpg",
-    sizes: "60x60",
-  },
-  {
-    rel: "apple-touch-icon",
-    type: "image/png",
-    href: "/icons/apple-icon-72x72.jpg",
-    sizes: "72x72",
-  },
-  {
-    rel: "apple-touch-icon",
-    type: "image/png",
-    href: "/icons/apple-icon-76x76.jpg",
-    sizes: "76x76",
-  },
-  {
-    rel: "apple-touch-icon",
-    type: "image/png",
-    href: "/icons/apple-icon-114x114.jpg",
-    sizes: "114x114",
-  },
-  {
-    rel: "apple-touch-icon",
-    type: "image/png",
-    href: "/icons/apple-icon-120x120.jpg",
-    sizes: "120x120",
-  },
-  {
-    rel: "apple-touch-icon",
-    type: "image/png",
-    href: "/icons/apple-icon-144x144.jpg",
-    sizes: "144x144",
-  },
-  {
-    rel: "apple-touch-icon",
-    type: "image/png",
-    href: "/icons/apple-icon-152x152.jpg",
-    sizes: "152x152",
-  },
-  {
-    rel: "apple-touch-icon",
-    type: "image/png",
-    href: "/icons/apple-icon-180x180.jpg",
-    sizes: "180x180",
+    href: "/icons/apple-touch-icon.png",
   },
 ]
 
@@ -148,7 +168,7 @@ const SEO: DefaultSeoProps = {
     },
     {
       name: "msapplication-config",
-      content: "/icons/browserconfig.xml",
+      content: "/browserconfig.xml",
     },
     {
       name: "msapplication-TileColor",
