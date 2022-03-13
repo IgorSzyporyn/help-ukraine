@@ -8,7 +8,7 @@
   "theme_color": "#0057b7",
   "categories": ["social"],
   "dir": "ltr",
-  "display": "minimal-ui",
+  "display": "standalone",
   "orientation": "portrait",
   "icons": [
     {
