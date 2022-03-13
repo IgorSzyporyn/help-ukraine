@@ -110,6 +110,10 @@ const SEO: DefaultSeoProps = {
   */
   additionalMetaTags: [
     {
+      name: "robots",
+      content: "index, follow",
+    },
+    {
       name: "keywords",
       content: "Ukraine, Help, Aid, Support, Hjælp, Støt, Doner,",
     },
