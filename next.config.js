@@ -7,6 +7,7 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  optimizeFonts: false,
   pwa: {
     dest: "public",
   },
