@@ -4,8 +4,7 @@ import { motion } from "framer-motion"
 import { NextSeo } from "next-seo"
 
 import { Button } from "../components/Button/Button"
-
-// export const config = { amp: true }
+import { Logo } from "../components/Logo/Logo"
 
 const containerAnimation = {
   hidden: {},
@@ -37,12 +36,7 @@ export default function Home() {
       <NextSeo />
       <Wrapper variants={containerAnimation} initial="hidden" animate="show">
         <Header variants={headerAnimation}>
-          <Image
-            alt="Help Ukraine | Denmark"
-            src="/images/logo.svg"
-            width="480"
-            height="480"
-          />
+          <Logo />
           <Title>Help Ukraine</Title>
           <Subtitle>Denmark</Subtitle>
           <Hashtag>#hUdk</Hashtag>
@@ -129,7 +123,7 @@ const Wrapper = styled(motion.div)`
 
 const Header = styled(motion.div)`
   display: flex;
-  width: 240px;
+  width: 320px;
   flex-direction: column;
   align-items: center;
 `
