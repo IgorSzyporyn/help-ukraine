@@ -74,6 +74,40 @@ export default function Home() {
             src="/images/mobilepay.png"
           />
         </Mobilepay>
+        <Description>
+          <h3>Om denne forening</h3>
+          <p>
+            Gruppen har til formål at samle økonomiske og materielle midler ind
+            til ukrainske flygtninge, koordinere transport og indkvartering i
+            Danmark. Alle evt. indsamlede midler går ubeskåret til hjælp - alt
+            arbejde i foreningen er ulønnet.
+          </p>
+          <h3>Gruppens regler</h3>
+          <p>
+            Vi overholder de danske myndighedernes retningslinjer samt gældende
+            love og regler. Vi er ikke en gruppe der hjælper folk i krig, samler
+            ind til våben eller appellerer til at omgå myndighedernes regler,
+            love eller anbefalinger og vi tager afstand fra omgåelser heraf.
+          </p>
+          <h3>Transport og indkvarterering</h3>
+          <p>
+            Al transport og indkvartering af Ukrainske flygtninge til Danmark
+            koordineres og godkendes af sidens administration, som dagligt
+            rådfører sig med relevante myndigheder. Vi fraråder pt. Privat
+            indkvartering og kørsel i privatbiler, som følge af rådgivning af
+            myndighederne.
+          </p>
+          <h3>Hvem er vi</h3>
+          <p>
+            Vi er en samling af engagerede ildsjæle, der brænder for at gøre en
+            forskel for Ukrainere ramt af denne krig. Fælles for os alle er, at
+            vi ikke bare har lyst til at følge begivenhederne i TV. Vi er en tæt
+            lille kernegruppe og derfor kan vi desværre heller ikke pt. Svare
+            alle de mange velmenende mennesker, der meget gerne vil hjælpe, men
+            appellerer til, at folk enten er tålmodige eller kan melde sig som
+            besøgsven hos Røde Kors, når flygtningene er kommet hertil.
+          </p>
+        </Description>
       </Wrapper>
     </>
   )
@@ -144,4 +178,8 @@ const Mobilepay = styled(motion.div)`
   border-radius: 7px;
   overflow: hidden;
   border: 1px solid #ccc;
+`
+
+const Description = styled.div`
+  display: none;
 `
