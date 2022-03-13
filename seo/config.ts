@@ -108,12 +108,12 @@ const SEO: DefaultSeoProps = {
   ],
   openGraph: {
     url: "http://helpukrainedenmark.dk",
-    title: "Help Ukraine | Denmark",
+    title: "Help and aid the Ukrainian people",
     description:
       "A non profit organisation to facilitate help for the humanitarian catastrophe that is unfolding in Ukraine",
     site_name: "Help Ukraine | Denmark",
     locale: "da_DK",
-    type: "organisation",
+    type: "website",
     images: [
       {
         url: "http://helpukrainedenmark.dk/images/opengraph-1200x630.jpg",
