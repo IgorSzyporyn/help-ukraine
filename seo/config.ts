@@ -90,7 +90,7 @@ const icons = [
   },
   {
     rel: "apple-touch-icon",
-    href: "/icons/apple-touch-icon.png",
+    href: "/icons/ios/180.png",
   },
 ]
 
