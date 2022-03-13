@@ -34,7 +34,7 @@ export default function Home() {
         <Header>
           <Image
             alt="Help Ukraine | Denmark"
-            src="/icons/icon-512x512.png"
+            src="/images/logo.svg"
             width="480"
             height="480"
           />
