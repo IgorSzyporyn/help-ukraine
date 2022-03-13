@@ -142,6 +142,7 @@ const Title = styled.h1`
 const Subtitle = styled.h2`
   margin: 0 0 16px 0;
   font-size: 22px;
+  font-weight: 400;
 `
 
 const Hashtag = styled.h3`
