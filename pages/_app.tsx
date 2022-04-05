@@ -15,7 +15,7 @@ import SEO from "../seo/config"
 import "../styles/global.css"
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  const { scrollYProgress } = useViewportScroll()
+  // const { scrollYProgress } = useViewportScroll()
   const { width = 0 } = useWindowSize()
   const [menuOpen, cycleMenuOpen] = useCycle(false, true)
 
