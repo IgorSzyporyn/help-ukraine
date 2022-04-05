@@ -5,7 +5,6 @@ import { NextSeo } from "next-seo"
 
 import { Button } from "../components/Button/Button"
 import { Logo } from "../components/Logo/Logo"
-import { Hamburger } from "../components/Hamburger/Hamburger"
 
 const containerAnimation = {
   hidden: {},

@@ -1,4 +1,4 @@
-import { motion, useCycle, useViewportScroll } from "framer-motion"
+import { motion, useCycle } from "framer-motion"
 import { Sling as Hamburger } from "hamburger-react"
 import { DefaultSeo } from "next-seo"
 import type { AppProps } from "next/app"
