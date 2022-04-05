@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "framer-motion": "^6.2.8",
+    "hamburger-react": "^2.4.1",
     "next": "latest",
     "next-pwa": "^5.4.6",
     "next-seo": "^5.1.0",

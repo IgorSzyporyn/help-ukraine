@@ -130,6 +130,10 @@ const SEO: DefaultSeoProps = {
       content: "index, follow",
     },
     {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1",
+    },
+    {
       name: "keywords",
       content: "Ukraine, Help, Aid, Support, Hjælp, Støt, Doner,",
     },

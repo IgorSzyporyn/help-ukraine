@@ -1,185 +1,100 @@
-import styled from "styled-components"
-import Image from "next/image"
-import { motion } from "framer-motion"
 import { NextSeo } from "next-seo"
-
+import { useContext } from "react"
+import styled, { css } from "styled-components"
 import { Button } from "../components/Button/Button"
-import { Logo } from "../components/Logo/Logo"
-
-const containerAnimation = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-}
-
-const buttonAnimation = {
-  hidden: { opacity: 0, scale: 0.5 },
-  show: { opacity: 1, scale: 1 },
-}
-
-const headerAnimation = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1 },
-}
-
-const mobilePayAnimation = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1 },
-}
+import { Card, CardContent, CardImage } from "../components/Card/Card"
+import { Facebook as _Facebook } from "../components/Facebook/Facebook"
+import { YouTube as _YouTube } from "../components/YouTube/YouTube"
+import { AppContext } from "../context/App"
 
 export default function Home() {
+  const { isMobile } = useContext(AppContext)
+
   return (
     <>
       <NextSeo />
-      <Wrapper variants={containerAnimation} initial="hidden" animate="show">
-        <Header variants={headerAnimation}>
-          <Logo style={{ marginTop: -16, marginBottom: -48 }} />
-          <Title>Help Ukraine</Title>
-          <Subtitle>Denmark</Subtitle>
-          <Hashtag>#hUdk</Hashtag>
-        </Header>
-        <FacebookButton
-          variants={buttonAnimation}
-          href="https://www.facebook.com/groups/helpukrainedenmark/?ref=share"
-        >
-          støt os på facebook
-        </FacebookButton>
-        <GoFundMeButton
-          variants={buttonAnimation}
-          href="https://gofund.me/2a40c33a"
-        >
-          doner på gofundme
-        </GoFundMeButton>
-        <SamlindButton
-          variants={buttonAnimation}
-          href="https://samlind.dk/indsamling/hjaelp-til-flygtninge-fra-ukraine/"
-        >
-          doner på samlind
-        </SamlindButton>
-        <MailButton
-          variants={buttonAnimation}
-          href="mailto:mail@helpukrainedenmark.dk"
-        >
-          skriv os en email
-        </MailButton>
-        <Mobilepay variants={mobilePayAnimation}>
-          <Image
-            alt="MobilePay"
-            width="400"
-            height="568"
-            src="/images/mobilepay.png"
-          />
-        </Mobilepay>
-        <Description>
-          <h3>Om denne forening</h3>
+      <IntroCard direction={isMobile ? "column" : "row"}>
+        <LoadingUpImage $isMobile={isMobile} />
+        <IntroContent $isMobile={isMobile}>
+          <h1>Hvem er vi?</h1>
           <p>
-            Gruppen har til formål at samle økonomiske og materielle midler ind
-            til ukrainske flygtninge, koordinere transport og indkvartering i
-            Danmark. Alle evt. indsamlede midler går ubeskåret til hjælp - alt
-            arbejde i foreningen er ulønnet.
+            Foreningen Hjælp til flygtninge fra Ukraine (CVR 43085697) blev
+            stiftet 15. marts 2022 af ildsjæle i en Facebook gruppe der opstod
+            ultimo februar 2002. Foreningens internationale navn er{" "}
+            <Emphasize>Help Ukraine Denmark</Emphasize>. Foreningen har til
+            formål at samle økonomiske og materielle midler til at bistå
+            ukrainske flygtninge. Desuden at hjælpe med transport,
+            indkvartering, samt juridisk vejledning og materiel hjælp.
           </p>
-          <h3>Gruppens regler</h3>
-          <p>
-            Vi overholder de danske myndighedernes retningslinjer samt gældende
-            love og regler. Vi er ikke en gruppe der hjælper folk i krig, samler
-            ind til våben eller appellerer til at omgå myndighedernes regler,
-            love eller anbefalinger og vi tager afstand fra omgåelser heraf.
-          </p>
-          <h3>Transport og indkvarterering</h3>
-          <p>
-            Al transport og indkvartering af Ukrainske flygtninge til Danmark
-            koordineres og godkendes af sidens administration, som dagligt
-            rådfører sig med relevante myndigheder. Vi fraråder pt. Privat
-            indkvartering og kørsel i privatbiler, som følge af rådgivning af
-            myndighederne.
-          </p>
-          <h3>Hvem er vi</h3>
-          <p>
-            Vi er en samling af engagerede ildsjæle, der brænder for at gøre en
-            forskel for Ukrainere ramt af denne krig. Fælles for os alle er, at
-            vi ikke bare har lyst til at følge begivenhederne i TV. Vi er en tæt
-            lille kernegruppe og derfor kan vi desværre heller ikke pt. Svare
-            alle de mange velmenende mennesker, der meget gerne vil hjælpe, men
-            appellerer til, at folk enten er tålmodige eller kan melde sig som
-            besøgsven hos Røde Kors, når flygtningene er kommet hertil.
-          </p>
-        </Description>
-      </Wrapper>
+          <IntroFooter>
+            <div>
+              <h4>Find os på sociale medier</h4>
+              <div>
+                <Facebook />
+                <YouTube />
+              </div>
+            </div>
+            <IntroButton small>Læs Mere</IntroButton>
+          </IntroFooter>
+        </IntroContent>
+      </IntroCard>
     </>
   )
 }
 
-const Wrapper = styled(motion.div)`
+const IntroCard = styled(Card)``
+
+type LoadingUpImageProps = {
+  $isMobile: boolean
+}
+
+const LoadingUpImage = styled(CardImage)<LoadingUpImageProps>`
+  background-image: url("/images/loading-up.jpg");
+
+  ${({ $isMobile }) =>
+    $isMobile
+      ? css`
+          padding-top: 56.25%;
+          background-position: 0 -190px;
+        `
+      : css`
+          flex-basis: 40%;
+        `}
+`
+
+type IntroContentProps = {
+  $isMobile: boolean
+}
+
+const IntroContent = styled(CardContent)<IntroContentProps>`
+  ${({ $isMobile }) =>
+    $isMobile
+      ? ""
+      : css`
+          flex-basis: 60%;
+        `}
+`
+
+const IntroFooter = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 400px;
-  width: 90vw;
-  text-align: center;
+  align-items: flex-end;
+  justify-content: space-between;
 `
 
-const Header = styled(motion.div)`
-  display: flex;
-  width: 320px;
-  flex-direction: column;
-  align-items: center;
+const Facebook = styled(_Facebook)`
+  height: 42px;
+  margin-right: 8px;
 `
 
-const Title = styled.h1`
-  margin: 16px 0 0 0;
-  font-size: 32px;
+const YouTube = styled(_YouTube)`
+  height: 42px;
 `
 
-const Subtitle = styled.h2`
-  margin: 0 0 16px 0;
-  font-size: 22px;
-  font-weight: 400;
-`
-
-const Hashtag = styled.h3`
-  margin: 0 0 32px 0;
-  color: #707070;
-`
-
-const FacebookButton = styled(Button)`
-  background-color: #0084ff;
-  width: 100%;
+const IntroButton = styled(Button)`
+  background-color: #0057b6;
   color: #ffffff;
-  margin-bottom: 24px;
 `
 
-const GoFundMeButton = styled(Button)`
-  background-color: #00a85c;
-  width: 100%;
-  color: #ffffff;
-  margin-bottom: 24px;
-`
-
-const SamlindButton = styled(Button)`
-  background-color: #004b24;
-  width: 100%;
-  color: #ffffff;
-  margin-bottom: 24px;
-`
-
-const MailButton = styled(Button)`
-  background-color: transparent;
-  border: 1px solid #000000;
-  width: 100%;
-  color: #000000;
-  margin-bottom: 24px;
-`
-
-const Mobilepay = styled(motion.div)`
-  width: 100%;
-  border-radius: 7px;
-  overflow: hidden;
-  border: 1px solid #ccc;
-`
-
-const Description = styled.div`
-  display: none;
+const Emphasize = styled.span`
+  font-weight: 500;
 `
