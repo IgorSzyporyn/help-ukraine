@@ -55,7 +55,7 @@ const LoadingUpImage = styled(CardImage)<LoadingUpImageProps>`
     $isMobile
       ? css`
           padding-top: 56.25%;
-          background-position: 0 -190px;
+          background-position: 0 -124px;
         `
       : css`
           flex-basis: 40%;
