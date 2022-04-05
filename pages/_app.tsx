@@ -260,6 +260,7 @@ const MobileMenu = styled(motion.div)`
 const BurgerMenu = styled.div`
   display: flex;
   justify-content: right;
+  justify-self: flex-end;
   align-items: center;
   z-index: 300;
 `
